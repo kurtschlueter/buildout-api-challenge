@@ -3,14 +3,14 @@ require 'json'
 
 class PropertiesController < ApplicationController
   def index
-    uri = URI('https://buildout.com/api/v1/APIKEY/properties.json?limit=25')
+    uri = URI('https://buildout.com/api/v1/'+ ENV['BUILDOUT_API_KEY'] + '/properties.json?limit=25')
     req = Net::HTTP.get(uri)
     @jsonParse = JSON.parse(req)
     @properties = @jsonParse["properties"]
   end
 
   def specific
-    uri = URI('https://buildout.com/api/v1/APIKEY/properties.json?limit=20')
+    uri = URI('https://buildout.com/api/v1/'+ ENV['BUILDOUT_API_KEY'] + '/properties.json?limit=25')
     req = Net::HTTP.get(uri)
     jsonParse = JSON.parse(req)
     properties = jsonParse["properties"]
