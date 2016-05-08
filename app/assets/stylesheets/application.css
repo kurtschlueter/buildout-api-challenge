@@ -1,0 +1,103 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+html { overflow-y: scroll; }
+
+.head-container {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  text-align: center;
+}
+
+.home-link a{
+  text-decoration: none;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-left: 20px;
+  padding-top: 10px;
+  z-index: 99;
+}
+
+.head-container img {
+  margin-top: 10px;
+}
+.gradient {
+  background-image:
+    linear-gradient(
+      blue, #f06d06
+    );
+}
+
+.head-container h1 {
+  color: white;
+}
+
+.main-container {
+  display: inline-block;
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 110px;
+}
+
+.individual-prop img {
+  width: 100%;
+}
+
+.grid-sizer, .grid-item { width: 32.4%; }
+
+.grid-item {
+  margin-bottom: 10px;
+}
+
+.individual-prop {
+  background-image:
+  linear-gradient(
+    blue, white
+  );
+    /*margin: 1px;*/
+  padding: 1%;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.individual-prop a,  .individual-prop h3{
+  text-decoration: none;
+  color: white;
+}
+
+.individual-prop h4 {
+  color: #042706;
+  margin-bottom: 10px;
+}
+
+.ind-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.ind-listing {
+  text-align: center
+}
+
+
+.ind-details {
+    background-image:
+  linear-gradient(
+    blue, white
+  );
+
+  margin-left: 12.5%;
+  margin-top: 10px;
+  width: 75%;
+  padding: 1%;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+}

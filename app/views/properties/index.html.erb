@@ -1,0 +1,13 @@
+<% @properties.each do |property| %>
+  <div class="grid-sizer"></div>
+  <div class="individual-prop grid-item">
+    <h2> <%= link_to property["sale_title"], "properties/specific?id=" + property['id'].to_s %></h2>
+    <h3><%=property["address"] %> <%=property["city"]%>, <%=property["state"]%> <%=property["zip"] %> </h3>
+    <% if property["sale_price_dollars"].to_i ==  0%>
+      <h4> Sale Price: Not Listed</h4>
+    <% else %>
+      <h4> Sale Price: $<%=property["sale_price_dollars"].to_i.to_s %></h4>
+    <% end %>
+    <img src="<%= property['photos'][0]['url'] %>"/>
+  </div>
+<% end %>

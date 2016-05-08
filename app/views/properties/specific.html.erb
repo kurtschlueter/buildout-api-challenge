@@ -1,0 +1,27 @@
+<div class="ind-listing">
+  <div class="ind-title">
+    <h2> <%= @current_prop["sale_title"] %></h2>
+    <h3><%=@current_prop["address"] %> <%=@current_prop["city"]%>, <%=@current_prop["state"]%> <%=@current_prop["zip"] %> </h3>
+    <% if @current_prop["sale_price_dollars"].to_i ==  0%>
+      <h4> Sale Price: Not Listed</h4>
+    <% else %>
+      <h4> Sale Price: $<%=@current_prop["sale_price_dollars"].to_i.to_s %></h4>
+    <% end %>
+  </div>
+
+  <ul class="bxslider">
+    <% @current_prop['photos'].each do |image| %>
+        <li><img src="<%= image['url'] %>"/></li>
+    <% end %>
+  </ul>
+
+  <h2> More Details: </h2>
+  <div class="ind-details">
+    <h4> County: <%=@current_prop["county"] %></h4>
+    <h4> Cross streets: <%=@current_prop["cross_streets"] %></h4>
+    <h4> Location Description: <%=@current_prop["location_description"] %></h4>
+    <h4> Lot size: <%=@current_prop["lot_size_acres"] %></h4>
+    <h4> Square feet: <%=@current_prop["building_size_sf"] %></h4>
+    <h4> Lease description: <%=@current_prop["lease_description"] %></h4>
+  </div>
+</div>

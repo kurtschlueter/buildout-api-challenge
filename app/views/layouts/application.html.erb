@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BuildoutApiChallenge</title>
+  <script src="//code.jquery.com/jquery-2.2.2.min.js"></script>
+  <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+  <script src="http://bxslider.com/lib/jquery.bxslider.js"></script>
+  <link href="http://bxslider.com/lib/jquery.bxslider.css" rel="stylesheet" />
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="head-container gradient">
+    <img src="/buildout_white.png" alt="Buildout" width="145">
+    <h1> Kurt's Buildout API Challenge </h1>
+  </div>
+
+  <h1 class="home-link"> <%= link_to "[ HOME ]", "/" %></h1>
+
+  <div class="main-container grid">
+    <%= yield %>
+  </div>
+
+</body>
+</html>
